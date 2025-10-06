@@ -1,4 +1,4 @@
-# BFHL API - IIIT Pune Full Stack Question Paper
+# BFHL API 
 
 A REST API built with Node.js and Express that processes arrays and returns categorized data.
 
