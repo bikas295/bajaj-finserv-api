@@ -88,16 +88,23 @@ curl -X POST http://localhost:3000/bfhl \
 
 ## Deployment
 
-This API is ready to be deployed on platforms like:
-- Vercel
-- Railway
-- Render
-- Heroku
-- Any Node.js hosting provider
+This API is ready to be deployed on platforms like Render, Railway, Vercel, Heroku, etc.
 
-Make sure to:
-1. Set the PORT environment variable if required by your hosting provider
-2. Update the user_id, email, and roll_number in server.js with your actual details
+### Deploy on Render
+
+1. Ensure `render.yaml` exists at the repo root (already added).
+2. Push your changes to GitHub.
+3. In Render, click New → Blueprint and select this repository.
+4. Confirm the service settings:
+   - Environment: Node
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+   - PORT is provided by Render automatically
+5. Create resources and deploy.
+
+Notes:
+- The server listens on `process.env.PORT` with a fallback to `3000` for local dev.
+- Update `user_id`, `email`, and `roll_number` in `server.js` with your actual details.
 
 ## Project Structure
 
